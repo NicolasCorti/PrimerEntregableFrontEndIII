@@ -19,6 +19,7 @@ export default function Post({aumentarLikes, titulo, texto, likes}) {
   const handleLike = (e)=> {
     e.preventDefault()
     aumentarLikes()
+    setcantidadLikes(cantidadLikes +1)
     console.log(cantidadLikes)
   } 
 
@@ -29,7 +30,7 @@ export default function Post({aumentarLikes, titulo, texto, likes}) {
         <h3>{titulo}</h3>
         <p>{texto}</p>
         <button onClick={handleLike}>Like</button>
-        <h5>{()=> likes<10? setcantidadLikes(cantidadLikes+1) : 'Más de 10 likes'}</h5>
+        <h5>{cantidadLikes}</h5>
       </>}
     </div>
   )
