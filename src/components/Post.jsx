@@ -30,7 +30,7 @@ export default function Post({aumentarLikes, titulo, texto, likes}) {
         <h3>{titulo}</h3>
         <p>{texto}</p>
         <button onClick={handleLike}>Like</button>
-        <h5>{cantidadLikes}</h5>
+        {cantidadLikes<10? <h5>{cantidadLikes}</h5> : <h5>{'Más de 10 likes'}</h5>}
       </>}
     </div>
   )
